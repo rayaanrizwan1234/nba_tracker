@@ -1,0 +1,77 @@
+.player-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #f9f9f9;
+    width: 300px;
+}
+
+.player-card h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.player-card p {
+    color: #666;
+    margin: 5px 0;
+}
+
+.team-info {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.team-info h3 {
+    color: #007bff;
+}
+
+.player-card .pin-button {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    padding: 10px 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.player-card .pin-button:hover {
+    background-color: #316d34; /* Darker green background */
+}
+
+/* Styles for the drawer */
+.drawer {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Hide drawer */
+    width: 250px;
+    height: 100%;
+    background-color: #f1f1f1;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    transition: right 0.3s;
+    overflow-y: auto;
+}
+
+.drawer.open {
+    right: 0; /* Show drawer */
+    width:400px;
+}
+
+/* Button to open the drawer */
+.open-drawer-button {
+    position: fixed;
+    right: 100px;
+    top: 10px;
+    z-index: 1000;
+}
+
+.close-drawer-button {
+    position: fixed;
+    right: 450px;
+    top: 10px;
+    z-index: 1000;
+}

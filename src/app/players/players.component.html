@@ -1,0 +1,58 @@
+<mat-form-field class="example-full-width">
+    <mat-label>Search by Player ID</mat-label>
+    <input matInput [(ngModel)]="searchId" (ngModelChange)="onIdChange()" placeholder="237" value="">
+</mat-form-field>
+
+<div *ngIf="player" class="player-card">
+    <div class="header">
+        <h2>{{ player['first_name'] }} {{ player['last_name'] }}</h2>
+        <span class="position">{{ player['position'] }}</span>
+    </div>
+    <div class="body">
+        <p><strong>Height:</strong> {{ player['height_feet'] }}'{{ player['height_inches'] }}"</p>
+        <p><strong>Weight:</strong> {{ player['weight_pounds'] }} lbs</p>
+        <div class="team-info">
+            <h3>{{ player['team']['full_name'] }}</h3>
+            <p><strong>City:</strong> {{ player['team']['city'] }}</p>
+            <p><strong>Conference:</strong> {{ player['team']['conference'] }}</p>
+            <p><strong>Division:</strong> {{ player['team']['division'] }}</p>
+        </div>
+    </div>
+    <button class="pin-button" (click)="pinPlayer()">Pin Player</button>
+</div>
+
+<!-- Button to open the drawer -->
+<div *ngIf="!isDrawerOpen">
+    <button class="open-drawer-button" (click)="toggleDrawer()">Open Pinned Players</button>
+</div>
+<div *ngIf="isDrawerOpen">
+    <button class="close-drawer-button" (click)="toggleDrawer()">Close Pinned Players</button>
+</div>
+
+<!-- Drawer for pinned players -->
+<div class="drawer" [class.open]="isDrawerOpen">
+    <h2>Pinned Players</h2>
+    <ul>
+        <li *ngFor="let player of pinnedPlayers">
+            <div class="player-card">
+                <div class="header">
+                    <h2>{{ player['first_name'] }} {{ player['last_name'] }}</h2>
+                    <span class="position">{{ player['position'] }}</span>
+                </div>
+                <div class="body">
+                    <p><strong>Height:</strong> {{ player['height_feet'] }}'{{ player['height_inches'] }}"</p>
+                    <p><strong>Weight:</strong> {{ player['weight_pounds'] }} lbs</p>
+                    <div class="team-info">
+                        <h3>{{ player['team']['full_name'] }}</h3>
+                        <p><strong>City:</strong> {{ player['team']['city'] }}</p>
+                        <p><strong>Conference:</strong> {{ player['team']['conference'] }}</p>
+                        <p><strong>Division:</strong> {{ player['team']['division'] }}</p>
+                    </div>
+                </div>
+                <button class="pin-button" (click)="pinPlayer()">Pin Player</button>
+            </div>
+        </li>
+    </ul>
+</div>
+
+
