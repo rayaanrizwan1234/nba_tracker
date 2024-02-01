@@ -1,0 +1,74 @@
+/* schedule.component.css */
+.schedule-container {
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .schedule-heading {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #333;
+  }
+  
+  .game-card {
+    background: linear-gradient(45deg, #21323d, #7618a1);
+    color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .game-card:hover {
+    transform: scale(1.03);
+  }
+  
+  .teams {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+  }
+  
+  .team {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .home-team {
+    background-color: #21323d;
+  }
+  
+  .visitor-team {
+    background-color: #7618a1;
+  }
+  
+  .team-name {
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+  
+  .versus {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .team-score {
+    font-size: 1.2em;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .game-details {
+    padding: 10px 15px;
+  }
+  
+  .date,
+  .status {
+    margin: 5px 0;
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  

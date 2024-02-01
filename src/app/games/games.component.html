@@ -1,0 +1,33 @@
+<!-- schedule.component.html -->
+<div class="schedule-container">
+    <h2 class="schedule-heading">Next {{ gameData.length }} Games</h2>
+    <div *ngFor="let game of gameData" class="game-card">
+      <div class="teams">
+        <div *ngIf="!(betGames.has(game.id) && (betGames.get(game.id) == game.home_team.id)); else betOnHome" class="team home-team">
+          <button (click)="bet(game.id, game.home_team.id)" class="team-name">{{ game.home_team.full_name }}</button>
+          <span class="team-score"> Score: {{ game.home_team_score }}</span>
+        </div>
+        <ng-template #betOnHome>
+          <div class="team home-team">
+            <span class="bet-info">You've bet on {{ game.home_team.full_name }}</span>
+            <span class="team-score"> Score: {{ game.home_team_score }}</span>
+          </div>        </ng-template>
+        <div class="versus">vs</div>
+        <div *ngIf="!(betGames.has(game.id) && (betGames.get(game.id) == game.visitor_team.id)); else betOnVisitor" class="team visitor-team">
+          <button (click)="bet(game.id, game.visitor_team.id)" class="team-name">{{ game.visitor_team.full_name }}</button>
+          <span class="team-score"> Score: {{ game.visitor_team_score }}</span>
+        </div>
+        <ng-template #betOnVisitor>
+          <div class="team visitor-team">
+            <span class="bet-info">You've bet on {{ game.visitor_team.full_name }}</span>
+            <span class="team-score"> Score: {{ game.visitor_team_score }}</span>
+          </div>        
+        </ng-template>
+      </div>
+      <div class="game-details">
+        <p class="date">Date: {{ game.date | date:'medium' }}</p>
+        <p class="status">Status: {{ game.status | date:'shortTime' }}</p>
+      </div>
+    </div>
+</div>
+  
