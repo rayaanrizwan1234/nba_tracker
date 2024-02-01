@@ -15,8 +15,5 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.dataService.getData().subscribe((info) => {
-      this.data = info;
-    })
   }
 }

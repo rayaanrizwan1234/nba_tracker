@@ -19,6 +19,10 @@ import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
 import { NavigationComponent } from './navigation/navigation.component';
 import { PlayersComponent } from './players/players.component';
+import { TrackerComponent } from './tracker/tracker.component';
+import { GamesComponent } from './games/games.component';
+import {MatSelectModule} from '@angular/material/select';
+import { BetsComponent } from './bets/bets.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +30,10 @@ import { PlayersComponent } from './players/players.component';
     MainComponent,
     BoxComponent,
     NavigationComponent,
-    PlayersComponent
+    PlayersComponent,
+    TrackerComponent,
+    GamesComponent,
+    BetsComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +50,8 @@ import { PlayersComponent } from './players/players.component';
     MatFormFieldModule,
     MatInputModule,
     MatNativeDateModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

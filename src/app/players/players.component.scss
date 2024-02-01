@@ -67,6 +67,18 @@
     right: 100px;
     top: 10px;
     z-index: 1000;
+    background-color: #4CAF50; /* Green background */
+    border: none; /* No borders */
+    color: white; /* White text */
+    padding: 15px 32px; /* Top and bottom padding, left and right padding */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline on text */
+    // display: inline-block; /* Inline block element */
+    // font-size: 16px; /* Font size */
+    // margin: 4px 2px; /* Margin around the button */
+    transition-duration: 0.4s; /* Duration of the transition effect */
+    cursor: pointer; /* Cursor changes to a pointer when hovered */
+    border-radius: 8px; /* Rounded corners */
 }
 
 .close-drawer-button {
@@ -74,4 +86,24 @@
     right: 450px;
     top: 10px;
     z-index: 1000;
+    background-color: #4CAF50; /* Green background */
+    border: none; /* No borders */
+    color: white; /* White text */
+    padding: 15px 32px; /* Top and bottom padding, left and right padding */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline on text */
+    // display: inline-block; /* Inline block element */
+    // font-size: 16px; /* Font size */
+    // margin: 4px 2px; /* Margin around the button */
+    transition-duration: 0.4s; /* Duration of the transition effect */
+    cursor: pointer; /* Cursor changes to a pointer when hovered */
+    border-radius: 8px; /* Rounded corners */
 }
+
+.close-drawer-buttonon:hover {
+    background-color: #45a049; /* Darker shade of green on hover */
+  }
+
+.open-drawer-buttonon:hover {
+    background-color: #45a049; /* Darker shade of green on hover */
+  }
