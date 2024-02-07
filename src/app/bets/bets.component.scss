@@ -1,0 +1,60 @@
+.bet-result-container {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.bet-result-container:hover {
+    background-color: #eaeaea;
+}
+
+.win {
+    border: 2px solid #28a745;
+}
+
+.loss {
+    border: 2px solid #dc3545;
+}
+
+.result-info {
+    flex: 1;
+}
+
+.result-heading {
+    color: #28a745;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.loss .result-heading {
+    color: #dc3545;
+}
+
+.result-details h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.result-details p {
+    color: #6c757d;
+    margin-bottom: 15px;
+}
+
+.game-details {
+    flex: 1;
+    margin-left: 20px;
+    font-size: 14px;
+    color: #495057;
+}
+
+.loss .game-details {
+    color: #dc3545;
+}
+
+/* Optional: Add more styles and animations for a personalized touch */

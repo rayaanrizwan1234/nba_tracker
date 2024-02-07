@@ -52,8 +52,6 @@ export class TrackerComponent implements OnInit {
 
       let formattedDate = `${year}-${month}-${day}`;
 
-      console.log(formattedDate);
-
       let data;
       this.dataService
         .getGameData(

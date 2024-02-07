@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BettingService } from '../betting.service';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-bets',
@@ -8,14 +9,22 @@ import { BettingService } from '../betting.service';
 })
 export class BetsComponent implements OnInit {
 
-  bettedGames: Map<number, number>;
-  gamesJson : string;
+    bettedGames :Map<number, string>;
+    mapGames: Map<number, number>;
 
-  constructor(private bettingService: BettingService) { }
+    constructor(private bettingService: BettingService, private dataService : DataService) {
+      this.bettedGames = new Map<number, string>();
+    }
 
-  ngOnInit(): void {
-    this.bettedGames = this.bettingService.betGames;
-    this.bettedGames.forEach((value: number, key: number) => {
-    });
+    ngOnInit(): void {
+      this.mapGames = this.bettingService.GamesMap;
+      console.log(this.mapGames);
+      
+      for (let gameId of this.mapGames.keys()) {
+        this.dataService.getGameById(gameId).subscribe((data) => {
+          this.bettedGames.set(gameId, data);
+        });
+      }
+      // console.log(this.bettedGames);
+    }
   }
-}

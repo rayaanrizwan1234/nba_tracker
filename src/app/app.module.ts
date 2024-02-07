@@ -51,7 +51,7 @@ import { BetsComponent } from './bets/bets.component';
     MatInputModule,
     MatNativeDateModule,
     ReactiveFormsModule,
-    MatSelectModule
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
